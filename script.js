@@ -60,15 +60,18 @@ function reset(){
     over = false;
 }
 document.getElementById("reset").addEventListener("click",reset);
-
+let win = document.getElementById("WIN");
+let loss = document.getElementById("LOSS");
 function checkWin(){
     if(playerScore >= 5){
         over = true;
         document.getElementById("main").innerHTML = "You won the game!";
+        win.play();
         setTimeout(reset , 3000);
     }else if(computerScore >= 5){
         over = true;
         document.getElementById("main").innerHTML = "You lost :(";
+        loss.play();
         setTimeout(reset, 3000);
     }
 }
