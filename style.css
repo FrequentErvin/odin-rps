@@ -46,4 +46,10 @@ font-size: 30px;
     border-radius: 10px;
     margin: 10px;
 }
+#computer{
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 18px;
+}
 

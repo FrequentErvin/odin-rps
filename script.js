@@ -1,6 +1,7 @@
 playerScore = 0;
 computerScore = 0;
 over = false;
+
 function computerPlay(){
     randint = Math.floor(Math.random()*3);
     switch(randint){
@@ -16,8 +17,7 @@ function updateScore(outcome){
     checkWin();
 }
 function playRound(playerSelection, computerSelection){
-    text = document.getElementById("computer").innerHTML;
-    text = "Computer played: " + computerSelection;
+    document.getElementById("computer").innerHTML = "Computer played: " + computerSelection;
         if(playerSelection == "rock"){
             if(computerSelection == "paper"){
                 computerScore++;
@@ -56,6 +56,7 @@ function reset(){
     document.getElementById("main").innerHTML = "Start game!";
     document.getElementById("playerscore").innerHTML = "Player score: 0";
     document.getElementById("computerscore").innerHTML = "Computer score: 0";
+    document.getElementById("computer").innerHTML = "Computer move displayed here.";
     over = false;
 }
 document.getElementById("reset").addEventListener("click",reset);
@@ -71,19 +72,15 @@ function checkWin(){
         setTimeout(reset, 5000);
     }
 }
-if(over == false){
     document.getElementById("rock").addEventListener("click", function(){
         computerSelection = computerPlay();
-        playRound("rock", computerSelection);
+        if(over === false) playRound("rock", computerSelection);
     });
     document.getElementById("paper").addEventListener("click", function(){
         computerSelection = computerPlay();
-        playRound("paper", computerSelection);
+        if(over === false) playRound("paper", computerSelection);
     });
     document.getElementById("scissors").addEventListener("click",function(){
         computerSelection = computerPlay();
-        playRound("scissors", computerSelection);
+        if(over === false) playRound("scissors", computerSelection);
     });
-}
-
-
