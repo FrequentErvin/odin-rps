@@ -65,11 +65,11 @@ function checkWin(){
     if(playerScore >= 5){
         over = true;
         document.getElementById("main").innerHTML = "You won the game!";
-        setTimeout(reset , 5000);
+        setTimeout(reset , 3000);
     }else if(computerScore >= 5){
         over = true;
         document.getElementById("main").innerHTML = "You lost :(";
-        setTimeout(reset, 5000);
+        setTimeout(reset, 3000);
     }
 }
     document.getElementById("rock").addEventListener("click", function(){
