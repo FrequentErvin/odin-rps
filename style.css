@@ -1,0 +1,49 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+    color:antiquewhite;
+    background-color: #1e3b99;
+    padding: 20px;
+    width: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 4px #999;
+    border-radius: 10px;
+    margin: 10px;
+}
+button:hover {background-color: blue}
+button:active {
+    background-color: #5ec2fc;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.center_div{
+    display: flex;  
+    justify-content: center;
+    margin: 40px;
+}
+.game{
+text-align: center;
+margin: 5%;
+font-size: 30px;
+
+}
+#reset{
+    color:antiquewhite;
+    background-color: red;
+    padding: 20px;
+    width: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 4px #999;
+    border-radius: 10px;
+    margin: 10px;
+}
+
